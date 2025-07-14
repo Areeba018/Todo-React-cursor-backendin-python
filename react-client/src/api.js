@@ -1,5 +1,5 @@
 // API utility for backend requests
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://todo-react-cursor-backendin-python.vercel.app';
 
 export async function login(username, password) {
   const res = await fetch(`${API_URL}/api/login`, {
