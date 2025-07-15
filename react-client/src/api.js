@@ -1,5 +1,7 @@
 // API utility for backend requests
-const API_URL = 'https://todo-react-cursor-backendin-python-seven.vercel.app/';
+const API_URL = 'process.env.REACT_APP_API_URL';
+// const API_URL = 'http://localhost:5000';
+
 
 export async function login(username, password) {
   const res = await fetch(`${API_URL}/api/login`, {
