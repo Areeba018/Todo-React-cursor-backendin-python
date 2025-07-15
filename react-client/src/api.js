@@ -4,7 +4,7 @@ const API_URL = 'https://todo-react-cursor-backendin-python-seven.vercel.app';
 
 
 export async function login(username, password) {
-  const res = await fetch(`${API_URL}/api/login`, {
+  const res = await fetch(`${API_URL}/api/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
@@ -14,7 +14,7 @@ export async function login(username, password) {
 }
 
 export async function register(username, password) {
-  const res = await fetch(`${API_URL}/api/register`, {
+  const res = await fetch(`${API_URL}/api/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password })
