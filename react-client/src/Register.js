@@ -14,6 +14,16 @@ function Register({ onRegisterSuccess, switchToLogin }) {
     setLoading(true);
     setError('');
     try {
+      // const res = await fetch('http://localhost:5000/api/auth/register', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ username, email, password })
+      // });
+      // const data = await res.json();
+      // if (!res.ok) throw new Error(data.message || 'Registration failed');
+      // onRegisterSuccess();
+
+      console.log('Registering with:', username, email, password);
       await apiRegister(username, email, password);
       onRegisterSuccess();
     } catch (err) {

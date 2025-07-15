@@ -13,6 +13,15 @@ function Login({ onLogin, switchToRegister }) {
     setLoading(true);
     setError('');
     try {
+      // const res = await fetch('http://localhost:5000/api/auth/login', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ username, password })
+      // });
+      // const data = await res.json();
+      // if (!res.ok) throw new Error(data.message || 'Login failed');
+      // localStorage.setItem('token', data.token);
+      // onLogin(data.token, data.username);
       const data = await apiLogin(username, password);
     localStorage.setItem('token', data.token);
     onLogin(data.token, data.username);
