@@ -179,5 +179,5 @@ def userinfo(current_user):
 def home():
     return 'Todo API is running!'
 
-if __name__ == '__main__':
-    app.run(debug=True, port=int(os.getenv('PORT', 5000))) 
+# if __name__ == '__main__':
+#     app.run(debug=True, port=int(os.getenv('PORT', 5000))) 
