@@ -13,7 +13,7 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('JWT_SECRET', 'my_super_secret_key_12345')
-CORS(app, supports_credentials=True)
+CORS(app, origins=["https://todo-react-cursor-backendin-python-nine.vercel.app"], supports_credentials=True)
 bcrypt = Bcrypt(app)
 
 DB_CONFIG = {
