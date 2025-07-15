@@ -17,7 +17,7 @@ export async function register(username, password) {
   const res = await fetch(`${API_URL}/api/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, password })
+    body: JSON.stringify({ username, email, password })
   });
   if (!res.ok) throw new Error('Registration failed');
   return res.json();
